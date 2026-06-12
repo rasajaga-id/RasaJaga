@@ -70,13 +70,19 @@ nav.scrolled{background:rgba(253,245,238,.94);backdrop-filter:blur(14px);padding
 .ab-hl{font-family:'Playfair Display',serif;font-size:clamp(34px,4vw,54px);font-weight:600;line-height:1.15;margin-bottom:1.5rem}
 .ab-body{font-size:15px;line-height:1.85;color:var(--dark-m);max-width:430px}
 .ab-right{position:relative}
-.ab-card{background:var(--coral);border-radius:28px;padding:2.75rem;position:relative;overflow:hidden}
+
+/* Asset: Trust Hands */
+.ab-card{background:var(--coral);border-radius:28px;padding:2.75rem;position:relative;overflow:hidden; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; min-height: 400px}
 .ab-card-bg{position:absolute;top:-50px;right:-50px;width:240px;height:240px;border-radius:50%;background:rgba(255,255,255,.07)}
 .ab-card-bg2{position:absolute;bottom:-60px;left:-30px;width:180px;height:180px;border-radius:50%;background:rgba(255,255,255,.04)}
-.ab-q{font-family:'Playfair Display',serif;font-size:21px;font-style:italic;line-height:1.55;color:#fff;margin-bottom:2rem;position:relative;padding-top:.5rem}
-.ab-q::before{content:'\201C';font-size:100px;color:rgba(255,255,255,.1);position:absolute;top:-30px;left:-10px;font-family:'Playfair Display',serif;line-height:1}
-.ab-meta{font-size:11px;color:rgba(255,255,255,.55);letter-spacing:.08em}
-.ab-pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:2rem}
+.hands-svg {width: 220px; height: 160px; margin-bottom: 20px; position:relative; z-index:2;}
+.hand-left {fill: var(--amber); animation: reach-right 4s ease-in-out infinite alternate;}
+.hand-right {fill: var(--cream); animation: reach-left 4s ease-in-out infinite alternate;}
+@keyframes reach-right { 0% {transform: translateX(-5px) rotate(-2deg)} 100% {transform: translateX(5px) rotate(2deg)} }
+@keyframes reach-left { 0% {transform: translateX(5px) rotate(2deg)} 100% {transform: translateX(-5px) rotate(-2deg)} }
+.ab-q{font-family:'Playfair Display',serif;font-size:20px;font-style:italic;line-height:1.45;color:#fff;margin-bottom:1.5rem;position:relative; z-index:2;}
+.ab-meta{font-size:11px;color:rgba(255,255,255,.55);letter-spacing:.08em; z-index:2;}
+.ab-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:1rem;position:relative;z-index:2;}
 .ab-pill{background:rgba(255,255,255,.12);color:rgba(255,255,255,.8);font-size:11px;padding:6px 14px;border-radius:100px;backdrop-filter:blur(4px)}
 
 /* Section label */
@@ -114,8 +120,11 @@ nav.scrolled{background:rgba(253,245,238,.94);backdrop-filter:blur(14px);padding
 .step-arr{position:absolute;top:2.5rem;right:-1.5rem;font-size:24px;color:var(--coral-l);opacity:.25;z-index:1}
 
 /* Pricing */
-.pricing{background:var(--amber-p);padding:9rem 3rem}
-.pricing-inner{max-width:1300px;margin:0 auto}
+.pricing{background:var(--amber-p);padding:9rem 3rem; position:relative}
+/* Asset: Pill & Clock decorative BG */
+.price-bg-asset {position:absolute; top:5%; right:5%; opacity:0.1; width:200px; animation: float-slow 8s infinite alternate}
+@keyframes float-slow { 0% {transform: translateY(0) rotate(0)} 100% {transform: translateY(-20px) rotate(10deg)} }
+.pricing-inner{max-width:1300px;margin:0 auto; position:relative; z-index:2}
 .pricing-hl{font-family:'Playfair Display',serif;font-size:clamp(34px,5vw,60px);font-weight:700;line-height:1.1;margin-bottom:4.5rem}
 .p-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.75rem;align-items:start}
 .p-card{background:#fff;border-radius:28px;padding:2.25rem;border:1px solid rgba(196,92,56,.1);transition:transform .3s}
@@ -150,7 +159,7 @@ nav.scrolled{background:rgba(253,245,238,.94);backdrop-filter:blur(14px);padding
 .cov-ghost{font-family:'Playfair Display',serif;font-size:70px;font-weight:700;color:rgba(255,255,255,.05);position:absolute;top:1.5rem;left:2rem;line-height:1;letter-spacing:-2px;pointer-events:none}
 .cov-lbl{font-size:10px;letter-spacing:.12em;color:rgba(255,255,255,.35);text-transform:uppercase;margin-bottom:.5rem;position:relative}
 .cov-name{font-family:'Playfair Display',serif;font-size:30px;font-weight:700;color:#fff;position:relative}
-.cov-hrs{display:flex;gap:1rem;margin-top:1.75rem;position:relative}
+.cov-hrs{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.75rem;position:relative}
 .cov-hr{background:rgba(255,255,255,.08);border-radius:14px;padding:12px 18px;backdrop-filter:blur(4px)}
 .cov-hv{font-size:20px;font-weight:500;color:var(--amber);font-family:'Playfair Display',serif;line-height:1}
 .cov-hl2{font-size:10px;color:rgba(255,255,255,.35);letter-spacing:.06em;margin-top:3px}
@@ -167,14 +176,18 @@ nav.scrolled{background:rgba(253,245,238,.94);backdrop-filter:blur(14px);padding
 .btn-wa:hover{background:var(--dark);color:#fff;transform:translateY(-4px)}
 .cta-note{margin-top:1.5rem;font-size:12px;color:rgba(255,255,255,.4);letter-spacing:.04em}
 
-/* Footer */
+/* Footer & Socials */
 footer{background:var(--dark);padding:4.5rem 3rem}
-.ft-inner{max-width:1300px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
+.ft-inner{max-width:1300px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-start}
 .ft-logo{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:#fff}
 .ft-logo em{color:var(--amber);font-style:italic}
 .ft-copy{font-size:12px;color:rgba(255,255,255,.3)}
 .ft-info{font-size:12px;color:rgba(255,255,255,.3);text-align:right;line-height:1.75}
-.ft-info a{color:var(--amber);text-decoration:none}
+.ft-link{color:var(--amber);text-decoration:none;transition:color .25s}
+.ft-link:hover{color:#fff}
+.ft-socials{display:flex;align-items:center;justify-content:flex-end;gap:1.25rem;margin-top:.5rem}
+.ft-socials a{color:var(--amber);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:color .25s}
+.ft-socials a:hover{color:#fff}
 
 /* Reveal anim */
 .rv{opacity:0;transform:translateY(36px);transition:opacity .9s ease,transform .9s cubic-bezier(.16,1,.3,1)}
@@ -268,8 +281,9 @@ footer{background:var(--dark);padding:4.5rem 3rem}
 
   /* Footer */
   footer{padding:3rem 1.5rem}
-  .ft-inner{flex-direction:column;gap:1.5rem;text-align:center}
+  .ft-inner{flex-direction:column;gap:2rem;text-align:center;align-items:center}
   .ft-info{text-align:center}
+  .ft-socials{justify-content:center}
 }
 
 @media(max-width:420px){
@@ -282,9 +296,11 @@ footer{background:var(--dark);padding:4.5rem 3rem}
 </head>
 <body>
 
+<!-- Custom cursor -->
 <div id="cur"></div>
 <div id="cur-ring"></div>
 
+<!-- Nav -->
 <nav id="nav">
   <a href="#" class="n-logo">Rasa<em>Jaga</em></a>
   <ul class="n-links">
@@ -296,7 +312,9 @@ footer{background:var(--dark);padding:4.5rem 3rem}
   <a href="#pesan" class="n-cta">Pesan Sekarang</a>
 </nav>
 
+<!-- Hero -->
 <section class="hero" id="hero">
+  <!-- SVG Blobs -->
   <svg class="hero-blob" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
     <path d="M420,280Q380,360,300,400Q220,440,160,380Q100,320,80,240Q60,160,130,110Q200,60,290,70Q380,80,420,160Q460,240,420,280Z" fill="#C45C38" opacity=".09"/>
   </svg>
@@ -316,7 +334,7 @@ footer{background:var(--dark);padding:4.5rem 3rem}
     <p class="h-sub">Kami menemani, merawat, dan menjaga orang yang kamu sayangi di rumah sakit — dengan sepenuh hati. Laporan langsung ke WhatsApp kamu, setiap saat.</p>
 
     <div class="h-acts">
-      <a href="https://api.whatsapp.com/send?phone=6287784354857" target="_blank" rel="noopener noreferrer" class="btn-p">
+      <a href="#pesan" class="btn-p">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
         Pesan via WhatsApp
       </a>
@@ -348,23 +366,25 @@ footer{background:var(--dark);padding:4.5rem 3rem}
   </div>
 </section>
 
+<!-- Ticker -->
 <div class="ticker">
   <div class="ticker-inner">
-    <span>Sabtu &amp; Minggu</span><span class="sep">·</span>
+    <span>Senin - Minggu</span><span class="sep">·</span>
     <span>Kota Tangerang &amp; Sekitarnya</span><span class="sep">·</span>
-    <span>Shift 12 &amp; 18 Jam</span><span class="sep">·</span>
+    <span>Shift 3, 6, 12, &amp; 18 Jam</span><span class="sep">·</span>
     <span>Laporan WA Real-Time</span><span class="sep">·</span>
     <span>Pendamping Terlatih</span><span class="sep">·</span>
     <span>Terjangkau &amp; Terpercaya</span><span class="sep">·</span>
-    <span>Sabtu &amp; Minggu</span><span class="sep">·</span>
+    <span>Senin - Minggu</span><span class="sep">·</span>
     <span>Kota Tangerang &amp; Sekitarnya</span><span class="sep">·</span>
-    <span>Shift 12 &amp; 18 Jam</span><span class="sep">·</span>
+    <span>Shift 3, 6, 12, &amp; 18 Jam</span><span class="sep">·</span>
     <span>Laporan WA Real-Time</span><span class="sep">·</span>
     <span>Pendamping Terlatih</span><span class="sep">·</span>
     <span>Terjangkau &amp; Terpercaya</span><span class="sep">·</span>
   </div>
 </div>
 
+<!-- About -->
 <section id="tentang" style="background:var(--cream)">
   <div class="about">
     <div class="ab-left rv">
@@ -377,19 +397,31 @@ footer{background:var(--dark);padding:4.5rem 3rem}
       <div class="ab-card">
         <div class="ab-card-bg"></div>
         <div class="ab-card-bg2"></div>
+        
+        <!-- About Animated Asset: Trust Hands -->
+        <svg class="hands-svg" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+          <!-- Left Hand (Patient) -->
+          <g class="hand-left" transform="translate(10, 40)">
+             <path d="M 0,20 C 15,20 30,10 45,15 C 60,20 70,35 85,35 C 90,35 95,30 90,25 C 80,15 70,10 55,10 C 40,10 25,0 10,5 Z" />
+             <!-- Gentle pulse dot indicating care -->
+             <circle cx="85" cy="25" r="4" fill="#fff" opacity="0.6">
+               <animate attributeName="opacity" values="0.2;0.8;0.2" dur="2s" infinite />
+             </circle>
+          </g>
+          <!-- Right Hand (Caregiver) -->
+          <g class="hand-right" transform="translate(110, 40)">
+             <path d="M 90,20 C 75,20 60,10 45,15 C 30,20 20,35 5,35 C 0,35 -5,30 0,25 C 10,15 20,10 35,10 C 50,10 65,0 80,5 Z" />
+          </g>
+        </svg>
+
         <p class="ab-q">Saat kamu tidak bisa hadir, kami pastikan orang yang kamu sayangi tidak sendirian.</p>
         <p class="ab-meta">RasaJaga · Jasa Pendamping Pasien</p>
-        <div class="ab-pills">
-          <span class="ab-pill">Sabtu &amp; Minggu</span>
-          <span class="ab-pill">Kota Tangerang</span>
-          <span class="ab-pill">12–18 Jam</span>
-          <span class="ab-pill">Terpercaya</span>
-        </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- Services -->
 <section class="services" id="layanan">
   <div class="svc-inner">
     <div class="svc-header rv">
@@ -480,6 +512,7 @@ footer{background:var(--dark);padding:4.5rem 3rem}
   </div>
 </section>
 
+<!-- How it works -->
 <section class="steps" id="cara-kerja">
   <p class="s-lbl rv">Cara Kerja</p>
   <h2 class="steps-hl rv d1">Mudah, cepat,<br>dan bisa langsung<br>via WhatsApp.</h2>
@@ -487,7 +520,7 @@ footer{background:var(--dark);padding:4.5rem 3rem}
     <div class="step rv d1">
       <div class="step-num">01</div>
       <h3 class="step-title">Pesan via WhatsApp</h3>
-      <p class="step-desc">Hubungi kami lewat WhatsApp. Pilih paket, tentukan jadwal shift (12 atau 18 jam), dan ceritakan kondisi pasien.</p>
+      <p class="step-desc">Hubungi kami lewat WhatsApp. Pilih paket, tentukan jadwal shift (3, 6, 12, atau 18 jam), dan ceritakan kondisi pasien.</p>
       <span class="step-arr">→</span>
     </div>
     <div class="step rv d2">
@@ -504,7 +537,19 @@ footer{background:var(--dark);padding:4.5rem 3rem}
   </div>
 </section>
 
+<!-- Pricing -->
 <section class="pricing" id="harga">
+  <!-- Pricing Decorative Asset: Floating Pills & Clock -->
+  <svg class="price-bg-asset" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <!-- Clock outline -->
+    <circle cx="50" cy="30" r="20" fill="none" stroke="var(--coral)" stroke-width="3"/>
+    <line x1="50" y1="30" x2="50" y2="18" stroke="var(--coral)" stroke-width="3" stroke-linecap="round"/>
+    <line x1="50" y1="30" x2="60" y2="35" stroke="var(--amber)" stroke-width="3" stroke-linecap="round"/>
+    <!-- Pill -->
+    <rect x="20" y="70" width="40" height="15" rx="7.5" fill="var(--coral)" transform="rotate(-20 40 77)"/>
+    <rect x="20" y="70" width="20" height="15" rx="7.5" fill="var(--amber)" transform="rotate(-20 40 77)"/>
+  </svg>
+
   <div class="pricing-inner">
     <p class="s-lbl rv">Harga</p>
     <h2 class="pricing-hl rv d1">Terjangkau,<br>transparan, &amp; jelas.</h2>
@@ -514,6 +559,14 @@ footer{background:var(--dark);padding:4.5rem 3rem}
         <p class="p-tier">Paket 1</p>
         <h3 class="p-name">Jaga Dasar</h3>
         <div class="p-amts">
+          <div class="p-r">
+            <span class="p-dur">Shift 3 jam</span>
+            <span class="p-amt">Rp 50.000</span>
+          </div>
+          <div class="p-r">
+            <span class="p-dur">Shift 6 jam</span>
+            <span class="p-amt">Rp 90.000</span>
+          </div>
           <div class="p-r">
             <span class="p-dur">Shift 12 jam</span>
             <span class="p-amt">Rp 175.000</span>
@@ -537,6 +590,14 @@ footer{background:var(--dark);padding:4.5rem 3rem}
         <h3 class="p-name">Jaga Standar</h3>
         <div class="p-amts">
           <div class="p-r">
+            <span class="p-dur">Shift 3 jam</span>
+            <span class="p-amt">Rp 75.000</span>
+          </div>
+          <div class="p-r">
+            <span class="p-dur">Shift 6 jam</span>
+            <span class="p-amt">Rp 130.000</span>
+          </div>
+          <div class="p-r">
             <span class="p-dur">Shift 12 jam</span>
             <span class="p-amt">Rp 250.000</span>
           </div>
@@ -559,6 +620,14 @@ footer{background:var(--dark);padding:4.5rem 3rem}
         <h3 class="p-name">Jaga Penuh</h3>
         <div class="p-amts">
           <div class="p-r">
+            <span class="p-dur">Shift 3 jam</span>
+            <span class="p-amt">Rp 95.000</span>
+          </div>
+          <div class="p-r">
+            <span class="p-dur">Shift 6 jam</span>
+            <span class="p-amt">Rp 170.000</span>
+          </div>
+          <div class="p-r">
             <span class="p-dur">Shift 12 jam</span>
             <span class="p-amt">Rp 320.000</span>
           </div>
@@ -580,6 +649,7 @@ footer{background:var(--dark);padding:4.5rem 3rem}
   </div>
 </section>
 
+<!-- Coverage -->
 <section id="area" style="background:var(--cream)">
   <div class="coverage">
     <div class="cov-text rv">
@@ -603,6 +673,14 @@ footer{background:var(--dark);padding:4.5rem 3rem}
       <h3 class="cov-name">Tangerang Raya</h3>
       <div class="cov-hrs">
         <div class="cov-hr">
+          <div class="cov-hv">3j</div>
+          <div class="cov-hl2">Shift Singkat</div>
+        </div>
+        <div class="cov-hr">
+          <div class="cov-hv">6j</div>
+          <div class="cov-hl2">Shift Setengah</div>
+        </div>
+        <div class="cov-hr">
           <div class="cov-hv">12j</div>
           <div class="cov-hl2">Shift Pagi</div>
         </div>
@@ -612,13 +690,13 @@ footer{background:var(--dark);padding:4.5rem 3rem}
         </div>
       </div>
       <div class="cov-day">
-        <span class="cov-dpill">Sabtu</span>
-        <span class="cov-dpill">Minggu</span>
+        <span class="cov-dpill">Senin - Minggu</span>
       </div>
     </div>
   </div>
 </section>
 
+<!-- CTA -->
 <section class="cta" id="pesan">
   <div class="cta-bg">RJ</div>
   <div class="cta-content rv">
@@ -628,17 +706,31 @@ footer{background:var(--dark);padding:4.5rem 3rem}
       <svg width="20" height="20" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
       Hubungi via WhatsApp
     </a>
-    <p class="cta-note">Respon cepat · Sabtu &amp; Minggu · Tangerang</p>
+    <p class="cta-note">Respon cepat · Senin - Minggu · Tangerang</p>
   </div>
 </section>
 
+<!-- Footer -->
 <footer>
   <div class="ft-inner">
-    <div class="ft-logo">Rasa<em>Jaga</em></div>
-    <p class="ft-copy">© 2025 RasaJaga. Jasa Pendamping Pasien Tangerang.</p>
+    <div>
+      <div class="ft-logo">Rasa<em>Jaga</em></div>
+      <p class="ft-copy" style="margin-top: 1rem; max-width: 250px; line-height: 1.6;">© 2026 RasaJaga. Jasa Pendamping Pasien Tangerang.</p>
+    </div>
     <div class="ft-info">
-      Sabtu &amp; Minggu · 12–18 Jam<br>
-      <a href="https://api.whatsapp.com/send?phone=6287784354857" target="_blank" rel="noopener noreferrer">WhatsApp kami</a>
+      JL. Raya Lenteng Agung, HE Mahjur No.87, Jakarta Selatan<br>
+      <a href="mailto:rasajaga.id@gmail.com" class="ft-link">rasajaga.id@gmail.com</a><br><br>
+      Senin - Minggu · 3–18 Jam<br>
+      <div class="ft-socials">
+        <a href="https://api.whatsapp.com/send?phone=6287784354857" target="_blank" rel="noopener noreferrer">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          WhatsApp
+        </a>
+        <a href="https://www.instagram.com/rasajaga.id" target="_blank" rel="noopener noreferrer">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          Instagram
+        </a>
+      </div>
     </div>
   </div>
 </footer>
