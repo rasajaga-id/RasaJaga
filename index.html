@@ -86,8 +86,6 @@ nav.scrolled{background:rgba(253,245,238,.94);backdrop-filter:blur(14px);padding
 @keyframes reach-left { 0% {transform: translateX(5px) rotate(2deg)} 100% {transform: translateX(-5px) rotate(-2deg)} }
 .ab-q{font-family:'Playfair Display',serif;font-size:20px;font-style:italic;line-height:1.45;color:#fff;margin-bottom:1.5rem;position:relative; z-index:2;}
 .ab-meta{font-size:11px;color:rgba(255,255,255,.55);letter-spacing:.08em; z-index:2;}
-.ab-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:1rem;position:relative;z-index:2;}
-.ab-pill{background:rgba(255,255,255,.12);color:rgba(255,255,255,.8);font-size:11px;padding:6px 14px;border-radius:100px;backdrop-filter:blur(4px)}
 
 /* Section label */
 .s-lbl{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--coral);margin-bottom:1rem;display:flex;align-items:center;gap:10px}
@@ -169,6 +167,22 @@ nav.scrolled{background:rgba(253,245,238,.94);backdrop-filter:blur(14px);padding
 .cov-hl2{font-size:10px;color:rgba(255,255,255,.35);letter-spacing:.06em;margin-top:3px}
 .cov-day{display:flex;gap:.5rem;margin-top:1.25rem;position:relative}
 .cov-dpill{background:var(--coral);color:#fff;font-size:11px;padding:5px 14px;border-radius:100px;font-weight:400}
+
+/* FAQ Section */
+.faq{padding:7rem 3rem 5rem;max-width:900px;margin:0 auto}
+.faq-hl{font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,50px);font-weight:700;margin-bottom:3rem;text-align:center;line-height:1.1}
+.faq-item{border-bottom:1px solid rgba(196,92,56,.18);padding:1.5rem 0;cursor:pointer;transition:border-color .3s}
+.faq-item:hover{border-color:var(--coral)}
+.faq-q{font-size:16px;font-weight:500;color:var(--dark);display:flex;justify-content:space-between;align-items:center;gap:2rem}
+.faq-icon{width:20px;height:20px;color:var(--coral);flex-shrink:0;transition:transform .3s cubic-bezier(.16,1,.3,1)}
+.faq-a{font-size:14px;color:var(--dark-m);line-height:1.8;max-height:0;overflow:hidden;opacity:0;transition:all .4s cubic-bezier(.16,1,.3,1)}
+.faq-item.active .faq-icon{transform:rotate(45deg)}
+.faq-item.active .faq-a{max-height:300px;opacity:1;margin-top:1.25rem}
+
+/* S&K Button Area */
+.snk-link-area {text-align:center; padding: 0 3rem 6rem; margin-top:-1rem}
+.snk-btn {display:inline-flex; align-items:center; gap:8px; padding:12px 28px; border:1.5px solid var(--coral-l); border-radius:100px; font-size:14px; color:var(--coral); text-decoration:none; transition:all .25s;}
+.snk-btn:hover {background:var(--coral); color:#fff;}
 
 /* CTA */
 .cta{background:var(--coral);padding:9rem 3rem;text-align:center;position:relative;overflow:hidden}
@@ -277,6 +291,13 @@ footer{background:var(--dark);padding:4.5rem 3rem}
   .cov-vis{min-height:240px;padding:2rem}
   .cov-ghost{font-size:48px}
 
+  /* FAQ */
+  .faq{padding:4rem 1.5rem 2rem}
+  .faq-hl{font-size:28px;margin-bottom:2rem}
+  .faq-q{font-size:15px;gap:1rem}
+  
+  .snk-link-area {padding: 0 1.5rem 4rem}
+
   /* CTA */
   .cta{padding:6rem 1.5rem}
   .cta-hl{font-size:clamp(32px,9vw,52px)}
@@ -304,12 +325,12 @@ footer{background:var(--dark);padding:4.5rem 3rem}
 
 <!-- Nav -->
 <nav id="nav">
-  <a href="#" class="n-logo">Rasa<em>Jaga</em></a>
+  <a href="index.html" class="n-logo">Rasa<em>Jaga</em></a>
   <ul class="n-links">
     <li><a href="#layanan">Layanan</a></li>
     <li><a href="#cara-kerja">Cara Kerja</a></li>
     <li><a href="#harga">Harga</a></li>
-    <li><a href="#area">Area</a></li>
+    <li><a href="#faq">FAQ</a></li>
   </ul>
   <a href="#pesan" class="n-cta">Pesan Sekarang</a>
 </nav>
@@ -697,6 +718,60 @@ footer{background:var(--dark);padding:4.5rem 3rem}
     </div>
   </div>
 </section>
+
+<!-- FAQ -->
+<section id="faq" class="faq rv">
+  <p class="s-lbl" style="justify-content:center; margin-bottom:1rem">Pusat Bantuan</p>
+  <h2 class="faq-hl">Pertanyaan yang sering<br>diajukan keluarga.</h2>
+  
+  <div class="faq-item" onclick="this.classList.toggle('active')">
+    <div class="faq-q">
+      Apakah pendamping RasaJaga memiliki latar belakang medis?
+      <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+    </div>
+    <p class="faq-a">Pendamping kami adalah tenaga terlatih yang berfokus pada <em>caregiving</em> (perawatan dasar, pendampingan, bantuan mobilitas, dan pengingat jadwal obat). Untuk tindakan medis invasif seperti pemasangan infus atau kateter, hal tersebut tetap menjadi wewenang penuh perawat dari pihak rumah sakit demi keselamatan pasien.</p>
+  </div>
+
+  <div class="faq-item" onclick="this.classList.toggle('active')">
+    <div class="faq-q">
+      Apakah bisa memesan layanan secara mendadak (hari H)?
+      <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+    </div>
+    <p class="faq-a">Kami sangat menyarankan pemesanan dilakukan minimal H-1 sebelum jadwal jaga agar kami dapat memilihkan pendamping terbaik. Namun, untuk kondisi darurat, silakan langsung hubungi admin WhatsApp kami dan kami akan mengupayakan ketersediaan pendamping secepat mungkin.</p>
+  </div>
+
+  <div class="faq-item" onclick="this.classList.toggle('active')">
+    <div class="faq-q">
+      Apakah RasaJaga melayani perawatan pasien di rumah (Homecare)?
+      <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+    </div>
+    <p class="faq-a">Fokus utama layanan RasaJaga saat ini adalah pendampingan pasien rawat inap di area Rumah Sakit di wilayah Tangerang dan sekitarnya. Kami ingin memastikan keluarga yang sedang bekerja tetap tenang mengetahui kerabatnya dijaga dengan baik di rumah sakit.</p>
+  </div>
+
+  <div class="faq-item" onclick="this.classList.toggle('active')">
+    <div class="faq-q">
+      Bagaimana sistem pembayaran layanannya?
+      <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+    </div>
+    <p class="faq-a">Pembayaran dilakukan secara transparan melalui transfer bank (BCA/Mandiri) atau e-Wallet setelah Anda mengonfirmasi jadwal, durasi shift, dan paket pendampingan melalui admin WhatsApp. Pendamping kami akan diberangkatkan setelah pembayaran diselesaikan.</p>
+  </div>
+
+  <div class="faq-item" onclick="this.classList.toggle('active')">
+    <div class="faq-q">
+      Apa yang dimaksud dengan Laporan Harian via WhatsApp?
+      <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+    </div>
+    <p class="faq-a">Ini adalah fitur unggulan kami. Selama shift berlangsung, pendamping akan secara berkala mengirimkan foto kondisi pasien, informasi apakah pasien sudah makan/minum obat, serta catatan penting dari perawat/dokter langsung ke nomor WhatsApp kerabat yang bertanggung jawab. Anda bisa pantau dari jarak jauh dengan tenang.</p>
+  </div>
+</section>
+
+<!-- Link S&K Baru -->
+<div class="snk-link-area rv">
+  <p style="font-size:13px; color:var(--dark-m); margin-bottom:1.5rem;">Ingin mengetahui batasan layanan dan tanggung jawab kami lebih detail?</p>
+  <a href="snk.html" class="snk-btn">
+    📄 Baca Syarat &amp; Ketentuan Layanan
+  </a>
+</div>
 
 <!-- CTA -->
 <section class="cta" id="pesan">
