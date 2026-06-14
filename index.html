@@ -47,14 +47,14 @@ nav.scrolled{background:rgba(253,245,238,.94);backdrop-filter:blur(14px);padding
 .hero-content{position:relative;z-index:2;max-width:800px;width:100%;display:flex;flex-direction:column;align-items:center}
 .h-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--coral);margin-bottom:2rem;opacity:0;animation:fu .8s ease .2s forwards}
 .h-eyebrow::before, .h-eyebrow::after{content:'';width:30px;height:1px;background:var(--coral)}
-.h-hl{font-family:'Playfair Display',serif;font-size:clamp(68px,10vw,148px);font-weight:700;line-height:.9;letter-spacing:-4px;margin-bottom:.25em}
+.h-hl{font-family:'Playfair Display',serif;font-size:clamp(58px,8vw,128px);font-weight:700;line-height:.95;letter-spacing:-3px;margin-bottom:.25em}
 .h-hl .ln{overflow:hidden;display:block}
 .h-hl .ln span{display:block;opacity:0;transform:translateY(105%);animation:su .95s cubic-bezier(.16,1,.3,1) forwards}
 .h-hl .ln:nth-child(1) span{animation-delay:.35s}
 .h-hl .ln:nth-child(2) span{animation-delay:.5s}
 .h-hl .ln:nth-child(3) span{animation-delay:.65s}
 .h-hl em{font-style:italic;color:var(--coral)}
-.h-sub{max-width:500px;font-size:16px;line-height:1.75;color:var(--dark-m);margin:2.5rem auto 3rem;opacity:0;animation:fu .8s ease .9s forwards}
+.h-sub{max-width:580px;font-size:16px;line-height:1.75;color:var(--dark-m);margin:2.5rem auto 3rem;opacity:0;animation:fu .8s ease .9s forwards}
 .h-acts{display:flex;justify-content:center;gap:1rem;align-items:center;opacity:0;animation:fu .8s ease 1.1s forwards}
 
 .btn-p{background:var(--coral);color:#fff;padding:16px 38px;border-radius:100px;font-size:15px;font-family:'DM Sans',sans-serif;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all .25s; animation: pulse-soft 2s infinite ease-in-out; box-shadow:var(--shadow-md)}
@@ -66,10 +66,10 @@ nav.scrolled{background:rgba(253,245,238,.94);backdrop-filter:blur(14px);padding
 .st-l{font-size:11px;color:var(--dark-m);letter-spacing:.05em;margin-top:6px}
 
 /* Ticker */
-.ticker{background:var(--dark);padding:15px 0;overflow:hidden}
-.ticker-inner{display:inline-flex;animation:tick 22s linear infinite}
-.ticker-inner span{font-size:12px;color:rgba(255,255,255,.55);letter-spacing:.1em;padding:0 2.5rem}
-.ticker-inner .sep{color:var(--coral-l)}
+.ticker{background:var(--dark);padding:18px 0;overflow:hidden;display:flex;white-space:nowrap}
+.ticker-inner{display:inline-flex;align-items:center;animation:tick 25s linear infinite}
+.ticker-inner span{font-size:14.5px;font-weight:500;color:rgba(255,255,255,.8);letter-spacing:.12em;text-transform:uppercase;padding:0 3rem;white-space:nowrap}
+.ticker-inner .sep{color:var(--coral);font-size:18px;font-weight:700}
 @keyframes tick{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
 /* About */
@@ -137,7 +137,7 @@ nav.scrolled{background:rgba(253,245,238,.94);backdrop-filter:blur(14px);padding
 .price-bg-asset {position:absolute; top:5%; right:5%; opacity:0.1; width:200px; animation: float-slow 8s infinite alternate}
 @keyframes float-slow { 0% {transform: translateY(0) rotate(0)} 100% {transform: translateY(-20px) rotate(10deg)} }
 .pricing-inner{max-width:1300px;margin:0 auto; position:relative; z-index:2}
-.pricing-hl{font-family:'Playfair Display',serif;font-size:clamp(34px,5vw,60px);font-weight:700;line-height:1.1;margin-bottom:4.5rem}
+.pricing-hl{font-family:'Playfair Display',serif;font-size:clamp(34px,5vw,60px);font-weight:700;line-height:1.1;margin-bottom:1rem}
 .p-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.75rem;align-items:start}
 .p-card{background:#fff;border-radius:var(--radius-lg);padding:2.5rem;border:1px solid rgba(196,92,56,.1);transition:all .3s cubic-bezier(0.16, 1, 0.3, 1);box-shadow:var(--shadow-sm)}
 .p-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-hover)}
@@ -254,7 +254,7 @@ footer{background:var(--dark);padding:5rem 3rem}
   .hero{padding:7rem 1.5rem 5rem;min-height:auto}
   .hero-blob{width:80vw;height:80vw;top:-5%;right:-20%} .hero-blob2{width:60vw;height:60vw}
   .h-eyebrow{font-size:9px;margin-bottom:1.25rem}
-  .h-hl{font-size:clamp(52px,14vw,80px);letter-spacing:-2px}
+  .h-hl{font-size:clamp(46px,12vw,70px);letter-spacing:-2px}
   .h-sub{font-size:14px;margin:1.5rem auto 2rem;max-width:100%}
   .h-acts{flex-direction:column;align-items:center;gap:1rem}
   .btn-p{width:100%;justify-content:center;padding:16px 24px} .btn-o{font-size:14px;background:rgba(196,92,56,.05);width:100%;justify-content:center}
@@ -282,7 +282,7 @@ footer{background:var(--dark);padding:5rem 3rem}
   .ft-info{text-align:center} .ft-socials{justify-content:center}
 }
 @media(max-width:420px){
-  .h-hl{font-size:clamp(44px,13vw,64px)}
+  .h-hl{font-size:clamp(38px,11vw,58px)}
   .svc-grid{grid-template-columns:1fr}
 }
 </style>
@@ -301,7 +301,7 @@ footer{background:var(--dark);padding:5rem 3rem}
     <li><a href="#harga">Harga</a></li>
     <li><a href="#faq">FAQ</a></li>
   </ul>
-  <a href="pesan.html" class="n-cta">Pesan Sekarang</a>
+  <a href="pesan.html" class="n-cta">Mulai Pendampingan</a>
 </nav>
 
 <!-- Hero -->
@@ -311,18 +311,18 @@ footer{background:var(--dark);padding:5rem 3rem}
   <div class="hero-content">
     <p class="h-eyebrow">Jasa Pendamping Pasien · Tangerang</p>
     <h1 class="h-hl">
-      <span class="ln"><span>Hadir</span></span>
-      <span class="ln"><span>saat kamu</span></span>
-      <span class="ln"><span>tak <em>bisa.</em></span></span>
+      <span class="ln"><span>Hadir saat kamu</span></span>
+      <span class="ln"><span>tidak bisa di</span></span>
+      <span class="ln"><span>samping <em>mereka.</em></span></span>
     </h1>
-    <p class="h-sub">Kami menemani, merawat, dan menjaga orang yang kamu sayangi di rumah sakit — dengan sepenuh hati. Laporan langsung ke WhatsApp kamu, setiap saat.</p>
+    <p class="h-sub">RasaJaga adalah layanan pendamping pasien di rumah sakit yang memberikan perawatan, bantuan harian, dan update kondisi langsung ke keluarga.</p>
     <div class="h-acts">
       <a href="pesan.html" class="btn-p">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-        Pesan Sekarang
+        Mulai Pendampingan
       </a>
-      <a href="#layanan" class="btn-o">
-        Lihat layanan
+      <a href="#cara-kerja" class="btn-o">
+        Lihat Cara Kerja
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
     </div>
@@ -387,7 +387,7 @@ footer{background:var(--dark);padding:5rem 3rem}
       </div>
       <div class="svc-item">
         <div class="svc-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E89050" stroke-width="1.5"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M12 5 9.04 7.96 5 10M12 5l2.96 2.96L19 10"/></svg></div>
-        <p class="svc-n">03</p><p class="svc-name">Beri Obat Tepat Waktu</p><p class="svc-desc">Memastikan jadwal obat pasien terpenuhi sesuai resep dokter</p>
+        <p class="svc-n">03</p><p class="svc-name">Jadwal Pengobatan</p><p class="svc-desc">Memastikan pasien tidak melewatkan jadwal pengobatan</p>
       </div>
       <div class="svc-item">
         <div class="svc-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E89050" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
@@ -399,7 +399,7 @@ footer{background:var(--dark);padding:5rem 3rem}
       </div>
       <div class="svc-item">
         <div class="svc-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E89050" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/><path d="M9 7h6M9 11h4"/></svg></div>
-        <p class="svc-n">06</p><p class="svc-name">Laporan Harian via WA</p><p class="svc-desc">Update kondisi, foto, dan catatan penting dikirim langsung ke WhatsApp keluarga</p>
+        <p class="svc-n">06</p><p class="svc-name">Laporan Kondisi</p><p class="svc-desc">Keluarga selalu tahu kondisi pasien tanpa harus datang</p>
       </div>
       <div class="svc-item">
         <div class="svc-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E89050" stroke-width="1.5"><path d="M18 15l-6-6-6 6"/><path d="M12 9v12"/><path d="M3 9l9-7 9 7"/></svg></div>
@@ -435,7 +435,8 @@ footer{background:var(--dark);padding:5rem 3rem}
   <svg class="price-bg-asset" viewBox="0 0 100 100"><circle cx="50" cy="30" r="20" fill="none" stroke="var(--coral)" stroke-width="3"/><line x1="50" y1="30" x2="50" y2="18" stroke="var(--coral)" stroke-width="3" stroke-linecap="round"/><line x1="50" y1="30" x2="60" y2="35" stroke="var(--amber)" stroke-width="3" stroke-linecap="round"/><rect x="20" y="70" width="40" height="15" rx="7.5" fill="var(--coral)" transform="rotate(-20 40 77)"/><rect x="20" y="70" width="20" height="15" rx="7.5" fill="var(--amber)" transform="rotate(-20 40 77)"/></svg>
   <div class="pricing-inner">
     <p class="s-lbl rv">Harga</p>
-    <h2 class="pricing-hl rv d1">Terjangkau,<br>transparan, &amp; jelas.</h2>
+    <h2 class="pricing-hl rv d1" style="margin-bottom: 1rem;">Terjangkau,<br>transparan, &amp; jelas.</h2>
+    <p class="rv d2" style="font-size: 15.5px; color: var(--dark-m); margin-bottom: 3.5rem;">Pilih paket sesuai kebutuhan, tanpa biaya tersembunyi.</p>
     <div class="p-grid">
       <div class="p-card rv d1">
         <p class="p-tier">Paket 1</p><h3 class="p-name">Jaga Dasar</h3>
@@ -550,11 +551,11 @@ footer{background:var(--dark);padding:5rem 3rem}
 <section class="cta" id="pesan">
   <div class="cta-bg">RJ</div>
   <div class="cta-content rv">
-    <h2 class="cta-hl">Siap menitipkan<br>si <em style="font-style:italic">tersayang?</em></h2>
+    <h2 class="cta-hl">Siap memastikan mereka<br><em style="font-style:italic">tidak sendirian?</em></h2>
     <p class="cta-sub">Satu klik saja, bantu kami memahami kebutuhan Anda lewat form singkat yang akan diteruskan ke WhatsApp.</p>
     <a href="pesan.html" class="btn-wa">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
-      Pesan Sekarang
+      Mulai Pendampingan
     </a>
     <p class="cta-note">Respon cepat · Senin - Minggu · Tangerang</p>
   </div>
