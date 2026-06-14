@@ -6,7 +6,6 @@
 <title>RasaJaga – Pendamping Pasien di Rumah Sakit Tangerang | Hadir Saat Keluarga Tak Bisa</title>
 <meta name="description" content="Layanan pendamping pasien rawat inap di Tangerang. Shift 3-18 jam, laporan real-time via WA. Transparan, terlatih, dan terjangkau.">
 
-<!-- Schema Markup LocalBusiness -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -65,7 +64,6 @@ nav.scrolled{background:rgba(253,245,238,.94);backdrop-filter:blur(14px);padding
 .n-cta:hover{background:var(--dark);box-shadow:var(--shadow-md);transform:translateY(-2px)}
 
 /* Hero */
-/* REVISI: padding bottom di hero ditambahin ke 14rem biar tombol nggak nabrak angka statistik */
 .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:9rem 3rem 14rem;position:relative;overflow:hidden;text-align:center}
 .hero-blob{position:absolute;top:-8%;right:-12%;width:55vw;height:55vw;animation:flt 9s ease-in-out infinite;z-index:0}
 .hero-blob2{position:absolute;bottom:-8%;left:-8%;width:38vw;height:38vw;animation:flt 12s ease-in-out infinite reverse;z-index:0;opacity:.6}
@@ -87,13 +85,11 @@ nav.scrolled{background:rgba(253,245,238,.94);backdrop-filter:blur(14px);padding
 .btn-p:hover{background:var(--dark);transform:translateY(-3px) !important; animation-play-state: paused; box-shadow:var(--shadow-hover)}
 .btn-o{color:var(--dark);font-size:14px;font-weight:500;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:color .2s;padding:10px 20px;border-radius:100px}
 .btn-o:hover{background:rgba(196,92,56,.08);color:var(--coral)}
-
-/* REVISI: h-stats didorong ke atas (bottom: 9rem) biar nggak ketutup panah bawah */
 .h-stats{position:absolute;bottom:9rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:row;justify-content:center;gap:4rem;text-align:center;opacity:0;animation:fu .8s ease 1.3s forwards;z-index:2}
 .st-n{font-family:'Playfair Display',serif;font-size:48px;font-weight:700;color:var(--dark);line-height:1}
 .st-l{font-size:11px;color:var(--dark-m);letter-spacing:.05em;margin-top:6px}
 
-/* REVISI: Scroll indicator dipaskan di paling bawah (bottom: 2.5rem) */
+/* Scroll indicator Baru */
 .scroll-ind{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.5rem;opacity:0;animation:fu .8s ease 1.5s forwards;z-index:2; text-decoration:none; cursor:none;}
 .scroll-lbl{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--dark-m); transition: color 0.3s;}
 .scroll-icon {width:34px;height:34px;border:1.5px solid rgba(196,92,56,.3);border-radius:50%;display:flex;justify-content:center;align-items:center;color:var(--coral);animation:bounce 2s infinite ease-in-out; transition: border-color 0.3s;}
@@ -175,23 +171,20 @@ nav.scrolled{background:rgba(253,245,238,.94);backdrop-filter:blur(14px);padding
 .p-card:not(.feat) .p-ck{background:var(--coral-p)}
 .p-ft{opacity:.85}
 
-/* Coverage */
+/* Coverage (MAP) */
 .coverage{padding:7rem 3rem;max-width:1300px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}
 .cov-hl{font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,50px);font-weight:700;margin-bottom:1.5rem;line-height:1.1}
 .cov-body{font-size:15px;line-height:1.85;color:var(--dark-m);max-width:380px;margin-bottom:2rem}
 .cov-tags{display:flex;flex-wrap:wrap;gap:8px}
 .cov-tag{background:var(--cream-d);color:var(--dark);font-size:13px;font-weight:500;padding:8px 18px;border-radius:100px}
-.cov-vis{background:var(--dark);border-radius:var(--radius-lg);padding:3rem;position:relative;overflow:hidden;min-height:340px;display:flex;flex-direction:column;justify-content:flex-end;box-shadow:var(--shadow-md)}
-.cov-vis::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 65% 25%,rgba(196,92,56,.35) 0%,transparent 60%)}
-.cov-ghost{font-family:'Playfair Display',serif;font-size:70px;font-weight:700;color:rgba(255,255,255,.05);position:absolute;top:1.5rem;left:2rem;line-height:1;letter-spacing:-2px;pointer-events:none}
-.cov-lbl{font-size:10px;font-weight:600;letter-spacing:.12em;color:rgba(255,255,255,.45);text-transform:uppercase;margin-bottom:.5rem;position:relative}
-.cov-name{font-family:'Playfair Display',serif;font-size:30px;font-weight:700;color:#fff;position:relative}
-.cov-hrs{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.75rem;position:relative}
-.cov-hr{background:rgba(255,255,255,.08);border-radius:var(--radius-sm);padding:12px 18px;backdrop-filter:blur(4px)}
-.cov-hv{font-size:20px;font-weight:500;color:var(--amber);font-family:'Playfair Display',serif;line-height:1}
-.cov-hl2{font-size:10px;color:rgba(255,255,255,.45);letter-spacing:.06em;margin-top:4px}
-.cov-day{display:flex;gap:.5rem;margin-top:1.5rem;position:relative}
-.cov-dpill{background:var(--coral);color:#fff;font-size:12px;font-weight:500;padding:6px 16px;border-radius:100px;}
+
+.cov-map {display: block; position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); height: 100%; min-height: 400px; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); cursor: none;}
+.cov-map:hover {transform: translateY(-8px); box-shadow: var(--shadow-hover);}
+.cov-map iframe {border: 0; position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none;}
+.cov-map-overlay {position: absolute; inset: 0; background: rgba(0,0,0,0.05); transition: background 0.3s;}
+.cov-map:hover .cov-map-overlay {background: transparent;}
+.cov-map-btn {position: absolute; bottom: 1.5rem; left: 50%; transform: translateX(-50%); background: #fff; color: var(--coral); font-size: 14px; font-weight: 600; padding: 12px 28px; border-radius: 100px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s; white-space: nowrap;}
+.cov-map:hover .cov-map-btn {background: var(--coral); color: #fff;}
 
 /* FAQ Section */
 .faq{padding:7rem 3rem 5rem;max-width:900px;margin:0 auto}
@@ -258,7 +251,7 @@ footer{background:var(--dark);padding:5rem 3rem}
 @media(max-width:768px){
   body{cursor:auto} #cur,#cur-ring{display:none}
   nav{padding:1rem 1.5rem} nav.scrolled{padding:.85rem 1.5rem}
-  .n-links{display:none} .n-phone{display:none} .n-cta{padding:9px 18px;font-size:12px}
+  .n-links{display:none} .n-phone{display:none} .n-cta{padding:10px 20px;font-size:12px}
   .hero{padding:7rem 1.5rem 5rem;min-height:auto}
   .hero-blob{width:80vw;height:80vw;top:-5%;right:-20%} .hero-blob2{width:60vw;height:60vw}
   .h-eyebrow{font-size:9px;margin-bottom:1.25rem}
@@ -284,8 +277,12 @@ footer{background:var(--dark);padding:5rem 3rem}
   .pricing{padding:5rem 1.5rem} .pricing-hl{font-size:28px;margin-bottom:2.5rem}
   .p-grid{grid-template-columns:1fr;gap:1.5rem}
   .p-card.feat{transform:none} .p-card.feat:hover{transform:translateY(-8px)}
+  
+  /* Coverage Area MAP Mobile */
   .coverage{grid-template-columns:1fr;gap:3rem;padding:5rem 1.5rem}
-  .cov-hl{font-size:26px} .cov-body{max-width:100%} .cov-vis{min-height:240px;padding:2rem} .cov-ghost{font-size:48px}
+  .cov-hl{font-size:26px} .cov-body{max-width:100%} 
+  .cov-map {min-height: 280px;}
+  
   .faq{padding:4rem 1.5rem 2rem} .faq-hl{font-size:28px;margin-bottom:2rem} .faq-q{font-size:15px;gap:1rem}
   .snk-link-area {padding: 0 1.5rem 4rem} .snk-btn {width:100%; justify-content:center}
   .cta{padding:6rem 1.5rem} .cta-hl{font-size:clamp(32px,9vw,52px)} 
@@ -309,7 +306,6 @@ footer{background:var(--dark);padding:5rem 3rem}
 <div id="cur"></div>
 <div id="cur-ring"></div>
 
-<!-- GLOBAL NAVBAR -->
 <nav id="nav">
   <div class="n-menu-wrapper">
     <a href="index.html" class="n-logo">Rasa<em>Jaga</em></a>
@@ -331,7 +327,6 @@ footer{background:var(--dark);padding:5rem 3rem}
   </div>
 </nav>
 
-<!-- Hero -->
 <section class="hero" id="hero">
   <svg class="hero-blob" viewBox="0 0 500 500"><path d="M420,280Q380,360,300,400Q220,440,160,380Q100,320,80,240Q60,160,130,110Q200,60,290,70Q380,80,420,160Q460,240,420,280Z" fill="#C45C38" opacity=".09"/></svg>
   <svg class="hero-blob2" viewBox="0 0 500 500"><path d="M380,310Q340,380,260,410Q180,440,130,370Q80,300,90,210Q100,120,180,90Q260,60,330,100Q400,140,400,220Q400,300,380,310Z" fill="#E89050" opacity=".12"/></svg>
@@ -366,7 +361,6 @@ footer{background:var(--dark);padding:5rem 3rem}
   </a>
 </section>
 
-<!-- About -->
 <section id="tentang" style="background:var(--cream)">
   <div class="about">
     <div class="ab-left rv">
@@ -383,7 +377,6 @@ footer{background:var(--dark);padding:5rem 3rem}
   </div>
 </section>
 
-<!-- Services -->
 <section class="services" id="layanan">
   <div class="svc-inner">
     <div class="svc-header rv">
@@ -430,7 +423,6 @@ footer{background:var(--dark);padding:5rem 3rem}
   </div>
 </section>
 
-<!-- How it works -->
 <section class="steps" id="cara-kerja">
   <p class="s-lbl rv">Cara Kerja</p>
   <h2 class="steps-hl rv d1" style="margin-bottom: 3rem;">Mudah, cepat,<br>dan bisa langsung via WhatsApp.</h2>
@@ -454,7 +446,6 @@ footer{background:var(--dark);padding:5rem 3rem}
   </div>
 </section>
 
-<!-- Pricing -->
 <section class="pricing" id="harga">
   <svg class="price-bg-asset" viewBox="0 0 100 100"><circle cx="50" cy="30" r="20" fill="none" stroke="var(--coral)" stroke-width="3"/><line x1="50" y1="30" x2="50" y2="18" stroke="var(--coral)" stroke-width="3" stroke-linecap="round"/><line x1="50" y1="30" x2="60" y2="35" stroke="var(--amber)" stroke-width="3" stroke-linecap="round"/><rect x="20" y="70" width="40" height="15" rx="7.5" fill="var(--coral)" transform="rotate(-20 40 77)"/><rect x="20" y="70" width="20" height="15" rx="7.5" fill="var(--amber)" transform="rotate(-20 40 77)"/></svg>
   <div class="pricing-inner">
@@ -463,7 +454,6 @@ footer{background:var(--dark);padding:5rem 3rem}
     <p class="rv d2" style="font-size: 15.5px; color: var(--dark-m); margin-bottom: 3.5rem;">Pilih paket sesuai kebutuhan, tanpa biaya tersembunyi.</p>
     
     <div class="p-grid">
-      <!-- PAKET 1 -->
       <div class="p-card rv d1">
         <p class="p-tier">Paket 1</p><h3 class="p-name">Jaga Dasar</h3>
         <div class="p-amts">
@@ -481,7 +471,6 @@ footer{background:var(--dark);padding:5rem 3rem}
         </div>
       </div>
 
-      <!-- PAKET 2 -->
       <div class="p-card feat rv d2">
         <span class="p-badge">✦ Paling diminati</span>
         <p class="p-tier">Paket 2</p><h3 class="p-name">Jaga Standar</h3>
@@ -500,7 +489,6 @@ footer{background:var(--dark);padding:5rem 3rem}
         </div>
       </div>
 
-      <!-- PAKET 3 -->
       <div class="p-card rv d3">
         <p class="p-tier" style="color: var(--coral);">Paket VVIP</p><h3 class="p-name">Jaga Penuh</h3>
         <div class="p-amts">
@@ -514,17 +502,29 @@ footer{background:var(--dark);padding:5rem 3rem}
           <div class="p-feat"><div class="p-ck"><svg width="9" height="9" viewBox="0 0 10 10"><path d="M2 5l2.5 2.5L8 3" stroke="#C45C38" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div><span class="p-ft">Semua layanan Paket Standar</span></div>
           <div class="p-feat"><div class="p-ck"><svg width="9" height="9" viewBox="0 0 10 10"><path d="M2 5l2.5 2.5L8 3" stroke="#C45C38" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div><span class="p-ft">Jembatan komunikasi ke dokter</span></div>
           <div class="p-feat"><div class="p-ck"><svg width="9" height="9" viewBox="0 0 10 10"><path d="M2 5l2.5 2.5L8 3" stroke="#C45C38" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div><span class="p-ft">Antar kebutuhan luar kamar</span></div>
-          <div class="p-feat"><div class="p-ck"><svg width="9" height="9" viewBox="0 0 10 10"><path d="M2 5l2.5 2.5L8 3" stroke="#C45C38" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div><span class="p-ft">Pendamping Senior (Khusus Lansia/Pasien Bingung)</span></div>
-          <div class="p-feat"><div class="p-ck"><svg width="9" height="9" viewBox="0 0 10 10"><path d="M2 5l2.5 2.5L8 3" stroke="#C45C38" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div><span class="p-ft">Update via Video Call tiap Shift</span></div>
-          <div class="p-feat"><div class="p-ck"><svg width="9" height="9" viewBox="0 0 10 10"><path d="M2 5l2.5 2.5L8 3" stroke="#C45C38" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div><span class="p-ft">Bantu Antar-Jemput (Obat, Laundry, Barang)</span></div>
-          <div class="p-feat"><div class="p-ck"><svg width="9" height="9" viewBox="0 0 10 10"><path d="M2 5l2.5 2.5L8 3" stroke="#C45C38" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div><span class="p-ft">Garansi Ganti Pendamping &lt;2 Jam</span></div>
+          
+          <div class="p-feat" style="margin-top:8px; padding-top:12px; border-top:1px dashed rgba(196,92,56,.2);">
+            <div class="p-ck"><svg width="9" height="9" viewBox="0 0 10 10"><path d="M2 5l2.5 2.5L8 3" stroke="#C45C38" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div>
+            <span class="p-ft" style="font-weight:500; color:var(--dark);">Pendamping Senior (Khusus Lansia/Pasien Bingung)</span>
+          </div>
+          <div class="p-feat">
+            <div class="p-ck"><svg width="9" height="9" viewBox="0 0 10 10"><path d="M2 5l2.5 2.5L8 3" stroke="#C45C38" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div>
+            <span class="p-ft" style="font-weight:500; color:var(--dark);">Update via Video Call tiap Shift</span>
+          </div>
+          <div class="p-feat">
+            <div class="p-ck"><svg width="9" height="9" viewBox="0 0 10 10"><path d="M2 5l2.5 2.5L8 3" stroke="#C45C38" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div>
+            <span class="p-ft" style="font-weight:500; color:var(--dark);">Bantu Antar-Jemput (Obat, Laundry, Barang)</span>
+          </div>
+          <div class="p-feat">
+            <div class="p-ck"><svg width="9" height="9" viewBox="0 0 10 10"><path d="M2 5l2.5 2.5L8 3" stroke="#C45C38" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div>
+            <span class="p-ft" style="font-weight:500; color:var(--dark);">Garansi Ganti Pendamping &lt;2 Jam</span>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Coverage -->
 <section id="area" style="background:var(--cream)">
   <div class="coverage">
     <div class="cov-text rv">
@@ -536,21 +536,20 @@ footer{background:var(--dark);padding:5rem 3rem}
         <span class="cov-tag">Ciledug</span><span class="cov-tag">Alam Sutera</span><span class="cov-tag">Bintaro</span><span class="cov-tag">Serpong</span><span class="cov-tag">Karawaci</span>
       </div>
     </div>
-    <div class="cov-vis rv d2">
-      <div class="cov-ghost">TNG</div>
-      <p class="cov-lbl">Area operasional</p><h3 class="cov-name">Tangerang Raya</h3>
-      <div class="cov-hrs">
-        <div class="cov-hr"><div class="cov-hv">3j</div><div class="cov-hl2">Shift Singkat</div></div>
-        <div class="cov-hr"><div class="cov-hv">6j</div><div class="cov-hl2">Shift Setengah</div></div>
-        <div class="cov-hr"><div class="cov-hv">12j</div><div class="cov-hl2">Shift Pagi</div></div>
-        <div class="cov-hr"><div class="cov-hv">18j</div><div class="cov-hl2">Shift Panjang</div></div>
+    
+    <a href="https://www.google.com/maps/search/Kota+Tangerang,+Tangerang+Selatan,+Kabupaten+Tangerang/" target="_blank" rel="noopener noreferrer" class="cov-map rv d2">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126899.5161642879!2d106.55141525435948!3d-6.26259021200236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f8e853d2e38d%3A0x301576d14feb9c0!2sTangerang%2C%20Banten!5e0!3m2!1sid!2sid!4v1680000000000!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      
+      <div class="cov-map-overlay"></div>
+      
+      <div class="cov-map-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+        Buka Peta Wilayah
       </div>
-      <div class="cov-day"><span class="cov-dpill">Senin - Minggu</span></div>
-    </div>
+    </a>
   </div>
 </section>
 
-<!-- FAQ -->
 <section id="faq" class="faq rv">
   <p class="s-lbl" style="justify-content:center; margin-bottom:1rem">Pusat Bantuan</p>
   <h2 class="faq-hl">Pertanyaan yang sering<br>diajukan keluarga.</h2>
@@ -577,13 +576,11 @@ footer{background:var(--dark);padding:5rem 3rem}
   </div>
 </section>
 
-<!-- Link S&K Baru -->
 <div class="snk-link-area rv">
   <p style="font-size:13px; color:var(--dark-m); margin-bottom:1.5rem;">Ingin mengetahui batasan layanan dan tanggung jawab kami lebih detail?</p>
   <a href="snk.html" class="snk-btn">📄 Baca Syarat &amp; Ketentuan Layanan</a>
 </div>
 
-<!-- CTA -->
 <section class="cta" id="pesan">
   <div class="cta-bg">RJ</div>
   <div class="cta-flex rv">
@@ -591,7 +588,7 @@ footer{background:var(--dark);padding:5rem 3rem}
       <h2 class="cta-hl" style="font-size: clamp(36px,5vw,64px); letter-spacing: -2px;">Siap memastikan mereka<br><em style="font-style:italic">tidak sendirian?</em></h2>
       <p class="cta-sub" style="margin-left: 0;">Satu klik saja, bantu kami memahami kebutuhan Anda lewat form singkat yang akan diteruskan ke WhatsApp.</p>
       <a href="pesan.html" class="btn-wa">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
         Mulai Pendampingan
       </a>
       <p class="cta-note" style="text-align: left;">Respon cepat · Senin - Minggu · Tangerang</p>
@@ -601,7 +598,6 @@ footer{background:var(--dark);padding:5rem 3rem}
   </div>
 </section>
 
-<!-- UNIVERSAL FOOTER -->
 <footer id="footer">
   <div class="ft-inner">
     <div>
@@ -627,7 +623,6 @@ footer{background:var(--dark);padding:5rem 3rem}
   </div>
 </footer>
 
-<!-- Floating WA -->
 <a href="https://api.whatsapp.com/send?phone=6287784354857&text=Halo%20RasaJaga%2C%20saya%20ingin%20bertanya%20seputar%20layanan%20pendampingan%20pasien." class="wa-float" target="_blank" rel="noopener noreferrer">
   <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
 </a>
@@ -646,6 +641,5 @@ const rvEls=document.querySelectorAll('.rv');
 const obs=new IntersectionObserver(entries=>{ entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target)}}); },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
 rvEls.forEach(el=>obs.observe(el));
 </script>
-
 </body>
 </html>
