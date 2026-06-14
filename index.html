@@ -65,7 +65,8 @@ nav.scrolled{background:rgba(253,245,238,.94);backdrop-filter:blur(14px);padding
 .n-cta:hover{background:var(--dark);box-shadow:var(--shadow-md);transform:translateY(-2px)}
 
 /* Hero */
-.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:9rem 3rem 5rem;position:relative;overflow:hidden;text-align:center}
+/* REVISI: padding bottom di hero ditambahin ke 14rem biar tombol nggak nabrak angka statistik */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:9rem 3rem 14rem;position:relative;overflow:hidden;text-align:center}
 .hero-blob{position:absolute;top:-8%;right:-12%;width:55vw;height:55vw;animation:flt 9s ease-in-out infinite;z-index:0}
 .hero-blob2{position:absolute;bottom:-8%;left:-8%;width:38vw;height:38vw;animation:flt 12s ease-in-out infinite reverse;z-index:0;opacity:.6}
 @keyframes flt{0%,100%{transform:translateY(0) rotate(0deg)}40%{transform:translateY(-22px) rotate(3deg)}70%{transform:translateY(12px) rotate(-2deg)}}
@@ -86,12 +87,14 @@ nav.scrolled{background:rgba(253,245,238,.94);backdrop-filter:blur(14px);padding
 .btn-p:hover{background:var(--dark);transform:translateY(-3px) !important; animation-play-state: paused; box-shadow:var(--shadow-hover)}
 .btn-o{color:var(--dark);font-size:14px;font-weight:500;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:color .2s;padding:10px 20px;border-radius:100px}
 .btn-o:hover{background:rgba(196,92,56,.08);color:var(--coral)}
-.h-stats{position:absolute;bottom:4rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:row;justify-content:center;gap:4rem;text-align:center;opacity:0;animation:fu .8s ease 1.3s forwards;z-index:2}
+
+/* REVISI: h-stats didorong ke atas (bottom: 9rem) biar nggak ketutup panah bawah */
+.h-stats{position:absolute;bottom:9rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:row;justify-content:center;gap:4rem;text-align:center;opacity:0;animation:fu .8s ease 1.3s forwards;z-index:2}
 .st-n{font-family:'Playfair Display',serif;font-size:48px;font-weight:700;color:var(--dark);line-height:1}
 .st-l{font-size:11px;color:var(--dark-m);letter-spacing:.05em;margin-top:6px}
 
-/* Scroll indicator Baru */
-.scroll-ind{position:absolute;bottom:3rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.5rem;opacity:0;animation:fu .8s ease 1.5s forwards;z-index:2; text-decoration:none; cursor:none;}
+/* REVISI: Scroll indicator dipaskan di paling bawah (bottom: 2.5rem) */
+.scroll-ind{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.5rem;opacity:0;animation:fu .8s ease 1.5s forwards;z-index:2; text-decoration:none; cursor:none;}
 .scroll-lbl{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--dark-m); transition: color 0.3s;}
 .scroll-icon {width:34px;height:34px;border:1.5px solid rgba(196,92,56,.3);border-radius:50%;display:flex;justify-content:center;align-items:center;color:var(--coral);animation:bounce 2s infinite ease-in-out; transition: border-color 0.3s;}
 .scroll-ind:hover .scroll-lbl {color: var(--coral);}
@@ -214,6 +217,7 @@ nav.scrolled{background:rgba(253,245,238,.94);backdrop-filter:blur(14px);padding
 .cta-content{position:relative; width: 100%;}
 .cta-hl{font-family:'Playfair Display',serif;font-size:clamp(36px,6.5vw,80px);font-weight:700;color:#fff;line-height:1.05;margin-bottom:1.5rem}
 .cta-sub{font-size:16px;color:rgba(255,255,255,.8);margin-bottom:3.5rem;max-width:500px;line-height:1.75}
+
 .btn-wa{display:inline-flex;align-items:center;gap:10px;background:#fff;color:var(--coral);padding:19px 42px;border-radius:100px;font-size:16px;font-weight:600;font-family:'DM Sans',sans-serif;text-decoration:none;transition:all .25s; animation: pulse-soft 2s infinite ease-in-out; box-shadow:var(--shadow-md)}
 .btn-wa:hover{background:var(--dark);color:#fff;transform:translateY(-4px) !important; animation-play-state: paused; box-shadow:var(--shadow-hover)}
 @keyframes pulse-soft { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.03); } }
@@ -254,7 +258,7 @@ footer{background:var(--dark);padding:5rem 3rem}
 @media(max-width:768px){
   body{cursor:auto} #cur,#cur-ring{display:none}
   nav{padding:1rem 1.5rem} nav.scrolled{padding:.85rem 1.5rem}
-  .n-links{display:none} .n-phone{display:none} .n-cta{padding:10px 20px;font-size:12px}
+  .n-links{display:none} .n-phone{display:none} .n-cta{padding:9px 18px;font-size:12px}
   .hero{padding:7rem 1.5rem 5rem;min-height:auto}
   .hero-blob{width:80vw;height:80vw;top:-5%;right:-20%} .hero-blob2{width:60vw;height:60vw}
   .h-eyebrow{font-size:9px;margin-bottom:1.25rem}
@@ -262,8 +266,11 @@ footer{background:var(--dark);padding:5rem 3rem}
   .h-sub{font-size:14px;margin:1.5rem auto 2rem;max-width:100%}
   .h-acts{flex-direction:column;align-items:center;gap:1rem}
   .btn-p{width:100%;justify-content:center;padding:16px 24px} .btn-o{font-size:14px;background:rgba(196,92,56,.05);width:100%;justify-content:center}
+  
+  /* Reset di mobile biar aman posisinya */
   .h-stats{position:static;flex-direction:row;justify-content:center;flex-wrap:wrap;gap:1.5rem;margin-top:3.5rem;opacity:1;animation:none;transform:none}
   .st-n{font-size:34px} .scroll-ind{display:none}
+  
   .about{grid-template-columns:1fr;gap:3rem;padding:5rem 1.5rem}
   .ab-left .ab-num{font-size:120px;margin-bottom:-50px;letter-spacing:-8px}
   .ab-hl{font-size:28px} .ab-body{font-size:14px;max-width:100%} .ab-q{font-size:17px}
@@ -320,7 +327,7 @@ footer{background:var(--dark);padding:5rem 3rem}
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
       0877-8435-4857
     </a>
-    <a href="pesan.html" class="n-cta">Mulai Pendampingan</a>
+    <a href="pesan.html" class="n-cta" style="background:var(--dark);">Mulai Pendampingan</a>
   </div>
 </nav>
 
@@ -608,7 +615,7 @@ footer{background:var(--dark);padding:5rem 3rem}
       <a href="snk.html" class="ft-link" style="text-decoration:underline;">Syarat & Kebijakan Privasi</a>
       <div class="ft-socials">
         <a href="https://api.whatsapp.com/send?phone=6287784354857" target="_blank" rel="noopener noreferrer">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
           WhatsApp CS
         </a>
         <a href="https://www.instagram.com/rasajaga.id" target="_blank" rel="noopener noreferrer">
@@ -622,7 +629,7 @@ footer{background:var(--dark);padding:5rem 3rem}
 
 <!-- Floating WA -->
 <a href="https://api.whatsapp.com/send?phone=6287784354857&text=Halo%20RasaJaga%2C%20saya%20ingin%20bertanya%20seputar%20layanan%20pendampingan%20pasien." class="wa-float" target="_blank" rel="noopener noreferrer">
-  <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
 </a>
 
 <script>
@@ -639,5 +646,6 @@ const rvEls=document.querySelectorAll('.rv');
 const obs=new IntersectionObserver(entries=>{ entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target)}}); },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
 rvEls.forEach(el=>obs.observe(el));
 </script>
+
 </body>
 </html>
